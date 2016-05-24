@@ -3,9 +3,9 @@ package com.theironyard;
 public class Main {
 
     public static void main(String[] args) {
-        Dog d = new Dog();
-        Snake s = new Snake();
-        Hawk h = new Hawk();
+        Animal d = createAnimal("Dog");
+        Animal s = createAnimal("Snake");
+        Animal h = createAnimal("Hawk");
 
         d.makesSound();
         s.makesSound();
@@ -15,5 +15,19 @@ public class Main {
         System.out.println(s);
         System.out.println(h);
 
+
+
+    }
+
+    public static Animal createAnimal(String name) {
+        switch (name) {
+            case "Dog":
+                return new Dog();
+            case "Snake":
+                return new Snake();
+            case "Hawk":
+                return new Hawk();
+        }
+        return null;
     }
 }
