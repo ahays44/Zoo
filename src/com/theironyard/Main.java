@@ -28,6 +28,6 @@ public class Main {
             case "Hawk":
                 return new Hawk();
         }
-        return null;
+        return new Animal();
     }
 }
