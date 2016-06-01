@@ -7,15 +7,23 @@ public class Main {
         Animal s = createAnimal("Snake");
         Animal h = createAnimal("Hawk");
 
+        Animal a = new Reptile() {
+          @Override
+            public void makesSound() {
+              System.out.println("Croak");
+          }
+        };
+        a.name = "Alligator";
+
+        a.makesSound();
         d.makesSound();
         s.makesSound();
         h.makesSound();
 
+        System.out.println(a);
         System.out.println(d);
         System.out.println(s);
         System.out.println(h);
-
-
 
     }
 
